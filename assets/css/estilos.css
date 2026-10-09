@@ -1,0 +1,110 @@
+/* ==========================================================
+   Agenda de Contactos - Estilos personalizados
+   ========================================================== */
+:root {
+    --agenda-primario: #4f46e5;
+    --agenda-secundario: #7c3aed;
+    --agenda-fondo: #f4f6fb;
+}
+
+html, body { height: 100%; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: var(--agenda-fondo);
+    color: #1f2937;
+}
+
+/* Barra de navegación */
+.navbar-agenda {
+    background: linear-gradient(90deg, var(--agenda-primario), var(--agenda-secundario));
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--agenda-primario);
+    --bs-btn-border-color: var(--agenda-primario);
+    --bs-btn-hover-bg: #4338ca;
+    --bs-btn-hover-border-color: #4338ca;
+    --bs-btn-active-bg: #3730a3;
+}
+
+/* Hero con imagen externa */
+.hero-agenda {
+    background: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    min-height: 170px;
+}
+
+.hero-overlay {
+    background: linear-gradient(90deg, rgba(49, 46, 129, .92), rgba(124, 58, 237, .55));
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tarjetas */
+.card { border-radius: 1rem; }
+
+.stat-card { transition: transform .2s ease, box-shadow .2s ease; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .08) !important; }
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+}
+
+/* Tabla */
+.tabla-contactos thead th {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #6b7280;
+    background: #f9fafb;
+    border-bottom-width: 1px;
+}
+
+.tabla-contactos td { padding-top: .85rem; padding-bottom: .85rem; }
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px #fff, 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+.avatar-lg { width: 64px; height: 64px; }
+
+/* Insignias */
+.badge-sangre {
+    background: #fee2e2;
+    color: #b91c1c;
+    font-weight: 700;
+    min-width: 46px;
+}
+
+.badge-genero { font-weight: 500; }
+.genero-masculino { background: #dbeafe; color: #1d4ed8; }
+.genero-femenino  { background: #fce7f3; color: #be185d; }
+.genero-otro      { background: #ede9fe; color: #6d28d9; }
+
+/* Formularios */
+.form-side-img {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #a5b4fc;
+    box-shadow: 0 0 0 .25rem rgba(79, 70, 229, .15);
+}
+
+/* Pie de página */
+.footer-agenda { background: #fff; border-top: 1px solid #e5e7eb; }

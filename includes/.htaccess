@@ -1,0 +1,3 @@
+# Impide el acceso directo desde el navegador a los archivos internos.
+# PHP los sigue incluyendo normalmente desde el servidor.
+Require all denied
